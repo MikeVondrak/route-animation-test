@@ -1,10 +1,10 @@
-<div id="Viewport-Cover" [@viewportAnimation]="getAnimationState(routerOutlet)"></div>
+<div id="Viewport-Overlay" [@viewportAnimation]="viewportOverlayAnimationState$ | async" (@viewportAnimation.done)="viewportOverlayAnimationDone($event)"></div>
 <div id="Viewport-Content">
   <header>Header</header>
 
-  <main [@routeChangeAnimation]="getAnimationState(routerOutlet)">
+  <main>
     <router-outlet #routerOutlet="outlet"></router-outlet>
   </main>
 
-  <footer [@footerChangeAnimation]="getAnimationState(routerOutlet)">Footer</footer>
+  <footer>Footer</footer>
 </div>

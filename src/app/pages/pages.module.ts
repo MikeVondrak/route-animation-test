@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { InsideComponent } from './inside/inside.component';
 import { MenuComponent } from './menu/menu.component';
+import { DirectivesModule } from '../directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     CommonModule,
     RouterModule,
+    DirectivesModule,
   ]
 })
 export class PagesModule { }
